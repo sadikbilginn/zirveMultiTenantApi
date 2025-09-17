@@ -1,0 +1,11 @@
+POST {{baseUrl}}/v1/tenant-login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "tenant_id": "tenant1",
+    "email": "user@tenant.com",
+    "password": "secret123"
+}
+
+> {% client.global.set("access_token", response.body.access_token); %}
